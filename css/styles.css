@@ -815,6 +815,7 @@ img {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
+  display: inline-flex;
 }
 
 .checkbox-text {
