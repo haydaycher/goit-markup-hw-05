@@ -162,6 +162,7 @@ img {
   text-decoration-skip-ink: none;
   color: #4d5ae5;
   margin-left: 4px;
+  outline: transparent;
 }
 
 .motto-page {
@@ -490,6 +491,7 @@ img {
 
 .first-footer-box {
   margin-right: 120px;
+  flex-shrink: 0;
 }
 
 .second-footer-box {
@@ -552,6 +554,14 @@ img {
   gap: 16px;
 }
 
+.footer-button:hover,
+.footer-button:focus {
+  background: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .footer-logo {
   color: #4d5ae5;
   font-family: 'Raleway', sans-serif;
@@ -594,8 +604,9 @@ img {
   gap: 16px;
 }
 
-.icons-footer {
+.icons-footer svg {
   fill: #f4f4fd;
+  margin-left: 16px;
 }
 
 .footer-form {
@@ -676,9 +687,7 @@ img {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  stroke-width: 1px;
-  stroke: rgba(0, 0, 0, 0.1);
+  outline: transparent;
 }
 .modal-btn:hover,
 .modal-btn:focus {
@@ -687,11 +696,9 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn:hover > svg,
-.modal-btn:focus > svg {
-  border: none;
+.modal-btn:hover .modal-btn-x,
+.modal-btn:focus .modal-btn-x {
   fill: #ffffff;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-x {
@@ -784,16 +791,21 @@ img {
   border-color: #4d5ae5;
 }
 
+.modal-check {
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-check:focus + .check-text span {
+  background-color: #404bbf;
+}
+
 .check-text {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  display: inline-flex;
-  align-items: center;
-}
-.check-text:focus {
-  fill: #4d5ae5;
 }
 
 .check-text span {
@@ -810,16 +822,31 @@ img {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
 }
-
-.modal-check:checked + .check-text span {
+.check-text:checked + .check-text .checkbox-text {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
-  display: inline-flex;
+}
+
+.check-text:focus {
+  fill: #4d5ae5;
 }
 
 .checkbox-text {
   display: inline-flex;
+}
+
+.checkbox-text span {
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check-icon {
@@ -848,5 +875,13 @@ img {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.submit-btn:hover,
+.submit-btn:focus {
+  background: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
