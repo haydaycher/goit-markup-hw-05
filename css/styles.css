@@ -493,7 +493,7 @@ img {
 }
 
 .second-footer-box {
-  margin-right: auto;
+  margin-right: 80px;
 }
 
 .third-footer-box {
@@ -596,7 +596,6 @@ img {
 
 .icons-footer {
   fill: #f4f4fd;
-  margin-left: 16px;
 }
 
 .footer-form {
